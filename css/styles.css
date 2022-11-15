@@ -54,9 +54,7 @@ img {
 }
 
 .header {
-  width: 1600px;
-  top: 80px;
-  border: 1px solid var(--border-collor);
+  border-bottom: 1px solid var(--border-collor);
 }
 .navigation {
   margin-right: auto;
@@ -144,7 +142,6 @@ img {
   padding-bottom: 200px;
 
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -185,6 +182,10 @@ img {
   border: transparent;
   padding: 10px 32px;
 }
+.button:hover,
+.buttton:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 /* --------------- section ------------- */
 .section {
   padding-top: 94px;
@@ -206,27 +207,18 @@ img {
   display: flex;
   column-gap: 30px;
 }
-.section-item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--dutton-color);
-  margin-bottom: 30px;
+.section-item{
+
 }
-.icon-aerial::before {
-  background-image: url(../images/antenna-1.svg);
+.section-item-icon{
+background-color:var(--dutton-color);
+display: flex;
+height: 120px;
+align-items: center;
+justify-content: center;
 }
-.icon-watch::before {
-  background-image: url(../images/clock-1.svg);
-}
-.icon-display::before {
-  background-image: url(../images/diagram-1.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/astronaut-1.svg);
+.section-icon{
+
 }
 .title {
   font-weight: 700;
@@ -236,6 +228,7 @@ img {
   text-transform: uppercase;
   color: var(--primaru-text-collor);
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .text {
   font-weight: 400;
@@ -413,6 +406,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .logo,
@@ -460,7 +454,6 @@ img {
 }
 .footer-wrap {
   margin-left: 70px;
-  padding-top: 12px;
 }
 .footer-list-icon {
   display: flex;
@@ -543,10 +536,16 @@ img {
   display: flex;
   gap: 30px;
 }
+.portfolio-imeges{
+  display: block;
+}
+.portfolio-imeges:hover,
+.portfolio-imeges:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
-.portfolio .features:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.features{
+
 }
 .features-list {
   padding: 20px 24px;
@@ -555,6 +554,7 @@ img {
   max-width: 370px;
   border-top: none;
 }
+
 .portfolio .title {
   font-weight: 700;
   font-size: 16px;
@@ -564,6 +564,7 @@ img {
   color: var(--primaru-text-collor);
   margin-bottom: 4px;
 }
+
 .portfolio .text {
   font-weight: 400;
   font-size: 16px;
